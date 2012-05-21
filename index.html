@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REST test</title>
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src='js/base64.js'></script>
+	<script src='js/app.js'></script>
+	<link rel='stylesheet' type='text/css' href='css/app.css'>
+</head>
+<body>
+	
+	<!-- Request config -->
+	<div id='reqConfig'>
+		<h2>Request</h2>
+		<form id='req' action='request.php' method='post'>
+			<!-- URI -->
+			<div>
+				<label for='uri'>URI:</label>
+				<input type='text' id='uri' name='uri'>
+			</div>
+			<!-- Auth -->
+			<div>
+				<label for='token'>Access token:</label>
+				<input type='text' id='token' name='token'>
+			</div>
+			<!-- Method -->
+			<div>
+				<label for='method'>Method:</label>
+				<div id='method'>
+					<input type='radio' name='method' id='method_get' value='GET' selected>
+					<label for='method_get'>GET</label>
+					
+					<input type='radio' name='method' id='method_post' value='POST'>
+					<label for='method_post'>POST</label>
+					
+					<!--
+					<input type='radio' name='method' id='method_put' value='PUT'>
+					<label for='method_put'>PUT</label>
+					
+					<input type='radio' name='method' id='method_delete' value='DELETE'>
+					<label for='method_delete'>DELETE</label>
+					
+					<input type='radio' name='method' id='method_head' value='HEAD'>
+					<label for='method_head'>HEAD</label>
+					
+					<input type='radio' name='method' id='method_options' value='OPTIONS'>
+					<label for='method_options'>OPTIONS</label>
+					-->
+				</div>
+			</div>
+			<!-- Payload -->
+			<div>
+				<label for='payload'>Payload:</label>
+				<textarea id='payload' name='payload'></textarea>
+			</div>
+				
+			<!-- Buttons -->
+			<div>
+				<input type='submit' value='Make request'>
+			</div>
+
+				
+		</form>
+	</div>
+	
+	<!-- Request response -->
+	<div id='reqResponse'>
+		<h2>Response</h2>
+		<p>Status: <span id='responseStatus'>-</span></p>
+		<textarea id='responseData'></textarea>
+	</div>
+	
+</body>

@@ -1,0 +1,45 @@
+body {
+    font-family: 'Helvetica Neue', helvetica, arial;
+    font-size: 100%;
+}
+
+
+input[type=text],
+input[type=password],
+textarea,
+label {
+    display: block;
+}
+input[type=text] {
+    width: 80%;
+}
+form div {
+    margin-bottom: 1em;
+}
+form textarea {
+    width: 80%;
+    height: 7em;
+}
+
+#method label {
+    display: inline;
+}
+
+
+#reqConfig {
+    float: left;
+    width: 50%;
+}
+#reqResponse {
+    float: right;
+    width: 50%;
+    overflow: scroll;
+}
+#responseData {
+    background: none;
+    border: none;
+    font-family: courier;
+    color: #000;
+    width: 100%;
+    height: 50em;
+}
